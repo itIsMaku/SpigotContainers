@@ -74,7 +74,7 @@ public class BukkitListenerService {
         }
     }
 
-    @BukkitEvent(value = PlayerChangedWorldEvent.class, priority = EventPriority.LOW)
+    @BukkitEvent(value = PlayerChangedWorldEvent.class, priority = EventPriority.HIGHEST)
     public void onWorldChange(PlayerChangedWorldEvent e) {
         containersService.findPlayerInContainers(e.getPlayer()).ifPresent(containeredPlayer -> {
             if (containersService.getContainers().get(containeredPlayer.getCurrentContainer()) instanceof WorldRestrictedContainer worldRestrictedContainer) {
