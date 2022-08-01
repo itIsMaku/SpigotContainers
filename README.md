@@ -27,3 +27,6 @@ Containers.findPlayerInContainers(Player player)
         .ifPresent(containeredPlayer -> containeredPlayer.leave());
 ```
 Container object contains methods for getting players, restricted worlds and ID.
+
+## Dependencies
+- [Mommons (Maku's Commons)](https://github.com/itIsMaku/Mommons)
