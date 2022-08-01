@@ -19,7 +19,8 @@ public class Container {
     private final String id;
     private final List<ContaineredPlayer> players;
 
-    public boolean join(ContaineredPlayer containeredPlayer) {
+    public boolean join(Player player) {
+        ContaineredPlayer containeredPlayer = new ContaineredPlayer(player, id);
         PlayerJoinContainerEvent playerJoinContainerEvent = new PlayerJoinContainerEvent(containeredPlayer, this);
         Bukkit.getPluginManager().callEvent(playerJoinContainerEvent);
         return players.add(containeredPlayer);
