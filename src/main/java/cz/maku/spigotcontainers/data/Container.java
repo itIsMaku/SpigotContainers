@@ -12,10 +12,9 @@ import org.bukkit.World;
 import java.util.List;
 
 @AllArgsConstructor
-@Getter
-@Setter
 public class Container {
 
+    @Getter
     private final String id;
     private final List<ContaineredPlayer> players;
 
@@ -31,4 +30,9 @@ public class Container {
         Bukkit.getPluginManager().callEvent(playerLeaveContainerEvent);
         return players.remove(containeredPlayer);
     }
+
+    public ImmutableList<ContaineredPlayers> getPlayers() {
+        return ImmutableList.copyOf(players);
+    }
+
 }
