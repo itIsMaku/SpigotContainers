@@ -7,8 +7,8 @@ We have two options. We can create a classic container or a container with world
 ```java
 Containers.createContainer(Container container);
 
-new Container(String id, List<ContaineredPlayers>)
-new WorldRestrictedContainer(String id, List<ContaineredPlayers>, List<World> worlds)
+new Container(String id, List<ContaineredPlayers> players)
+new WorldRestrictedContainer(String id, List<ContaineredPlayers> players, List<World> worlds)
 ```
 Now we can find container by id and join player.
 ```java
